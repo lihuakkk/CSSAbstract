@@ -4,6 +4,9 @@
 	<title></title>
 </head>
 <style type="text/css">
+	.border-box{
+		box-sizing: border-box;
+	}
 	.parent{
 		width: 500px;
 		height: 500px;
@@ -48,7 +51,16 @@
 <body>	
 <h1>Box model</h1>
 <div class="parent">
-	<div class="child"></div>
+	<div class="child">
+</div>
+	<p>element with initial box-sizing content-box</p>
+	<p>width = contentWidth</p>
+</div>
+
+<div class="parent border-box">
+	<div class="child border-box">	</div>
+	<p>element with box-sizing border-box</p>
+	<p>width = borderLeftWidth + paddingLeft + contentWidth + paddingRight + bordeRightWidth</p>
 </div>
 <div class="box1">
 	<div class="box2 common center">

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>containing block</title>
+</head>
+<style type="text/css">
+	.box{
+		width: 300px;
+		border: 1px solid;
+		display: flex;
+	}
+	.large-box{
+		width: 500px;
+		height: 500px;
+		border: 1px solid;
+		margin-top: 15px;
+	}
+	.small-box{
+		width: 50%;
+		height: 50%;
+		margin: 10%;
+		border: 1px solid;
+	}
+
+	.small-box-n{
+		width: 80%;
+		height: 80px;
+		margin: 20px;
+		border: 1px solid;
+	}
+	.child{
+		width: 100px;
+		height: 100px;
+		margin: 10%;
+		border: 1px solid;
+	}
+	.persent-height{
+		height: 100%;
+	}
+	.p-relative{
+		position: relative;
+	}
+	.p-absolute{
+		position: absolute;
+	}
+	.p-fixed{
+		position: fixed;
+	}
+	.percent-wdith{
+		width: 50%;
+		height: 50%;
+		margin: 10%;
+		border: 1px solid;
+	}
+	.float-left{
+		float: left;
+		width: 100px;
+		height: 150px;
+		border: 1px solid;
+	}
+	.box2{
+		display: block;
+		margin-top: 15px;
+	}
+	.ab-box{
+		height: 200px;
+		bottom: 0;
+		width: 100%;
+		border: 1px solid;
+	}
+</style>
+<body>
+<div class="box">
+parent height:auto
+	<div class="child">
+	height: 300px;
+	</div>
+	<div class="child persent-height">
+		height: 100px;
+	</div>
+</div>
+<div class="box box2">
+parent height:auto
+	<div class="float-left">
+		float child
+	</div>
+</div>
+<div style="clear: both;"></div>
+<div class="large-box" style="position: relative;">
+	<div class="p-absolute  ab-box">
+		child absolute
+	</div>
+</div>
+<div class="box" style="display: block;">
+box 3 
+	<div class="small-box-n"></div>
+	<div class="small-box-n"></div>
+	<div class="small-box-n"></div>
+</div>
+</body>
+</html>

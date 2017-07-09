@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>containing block</title>
+</head>
+<style type="text/css">
+	.box{
+		width: 300px;
+		height: 300px;
+		border: 1px solid;
+	}
+	.large-box{
+		width: 500px;
+		height: 500px;
+		border: 1px solid;
+	}
+	.small-box{
+		width: 50%;
+		height: 50%;
+		margin: 10%;
+		border: 1px solid;
+	}
+	.child{
+		width: 100px;
+		height: 100px;
+		margin: 10%;
+		border: 1px solid;
+	}
+	.inline-child{
+		margin: 10%;
+	}
+	.p-relative{
+		position: relative;
+	}
+	.p-absolute{
+		position: absolute;
+	}
+	.p-fixed{
+		position: fixed;
+	}
+	.percent-wdith{
+		width: 50%;
+		height: 50%;
+		margin: 10%;
+		border: 1px solid;
+	}
+</style>
+<body>
+<div class="box">
+	<div class="child">
+		child with position static
+	</div>
+	<div class="child p-relative">
+		child whit position relative
+	</div>
+	<span class="inline-child">
+		i an a span
+	</span>
+</div>
+<div class="p-relative large-box" style="margin-top: 100px;">
+	large-box
+	<div class="box">
+		box
+		<div class="p-absolute small-box">
+			absolute element
+		</div>
+		<div class="p-fixed percent-wdith">
+			fixed element
+		</div>
+
+	</div>
+</div>
+</body>
+</html>
